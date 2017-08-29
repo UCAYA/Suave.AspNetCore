@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3F473FA-06DD-459E-96CD-13A9906FCF38}"
 EndProject
@@ -9,14 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
-		global.json = global.json
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Suave.AspNetCore", "src\Suave.AspNetCore\Suave.AspNetCore.xproj", "{47F9EBCB-BAAE-4382-9C53-DD14A2B79B82}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5108669A-F708-4EDE-B409-36C5E47441FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suave.AspNetCore", "src\Suave.AspNetCore\Suave.AspNetCore.csproj", "{47F9EBCB-BAAE-4382-9C53-DD14A2B79B82}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Suave.AspNetCore.App", "test\Suave.AspNetCore.App\Suave.AspNetCore.App.xproj", "{B6CC0A15-0E4C-42F0-AA72-C7819C298C3E}"
 EndProject
@@ -48,5 +47,8 @@ Global
 		{47F9EBCB-BAAE-4382-9C53-DD14A2B79B82} = {A3F473FA-06DD-459E-96CD-13A9906FCF38}
 		{B6CC0A15-0E4C-42F0-AA72-C7819C298C3E} = {5108669A-F708-4EDE-B409-36C5E47441FA}
 		{360DF745-47C8-4B9C-BBC2-CD601AADC5AD} = {5108669A-F708-4EDE-B409-36C5E47441FA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA11B3AF-015D-425D-8724-7D90FF880573}
 	EndGlobalSection
 EndGlobal

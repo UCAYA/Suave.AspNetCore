@@ -82,12 +82,15 @@ namespace Suave.AspNetCore
 
             var suaveRuntime = Http.HttpRuntimeModule.empty;
             var suaveSocketConnection = ConnectionModule.empty;
-            return
-                Http.HttpContextModule.create(
-                    suaveRequest,
-                    suaveRuntime,
-                    suaveSocketConnection,
-                    false);
+
+            FSharpMap<string, object> userState = 
+                MapModule.Empty<string, object>().Add("WebSockets", context.WebSockets);
+
+
+            Http.HttpCode hTTP_ = Http.HttpCode.HTTP_404;
+            var suaveResult = new Http.HttpResult(new Http.HttpStatus(hTTP_.code, hTTP_.reason), FSharpList<Tuple<string, string>>.Empty, Http.HttpContent.NullContent, false);
+            return new Http.HttpContext(suaveRequest, suaveRuntime, suaveSocketConnection, userState, new Http.HttpResult(new Http.HttpStatus(hTTP_.code, hTTP_.reason), FSharpList<Tuple<string, string>>.Empty, Http.HttpContent.NullContent, false));
+            
         }
 
         public static Http.HttpMethod HttpMethodFromString(string method)
